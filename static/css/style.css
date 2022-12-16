@@ -97,21 +97,8 @@ input[type="text"] {
   border-radius: 1em;
 }
 
-body > header {
-  padding: 3em 4em 2em 4em;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-body > header img {
-  width: 225px;
-}
-
 main {
-  padding: 0 4em 4em 4em;
+  padding: 5em 4em 4em 4em;
   height: 100%;
   width: 100%;
 }
@@ -145,7 +132,7 @@ select:hover {
   transition: background-color .5s ease;
 }
 
-.home section {
+main section {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -153,7 +140,7 @@ select:hover {
   margin-top: 2em;
 }
 
-.home section section {
+main section section {
   height: 100%;
   width: 100%;
   max-width: 420px;
@@ -168,36 +155,36 @@ select:hover {
   transition: transform .5s ease, box-shadow .75s ease;;
 }
 
-.home section section:hover {
+main section section:hover {
   transform: scale(1.007);
   transition: transform .5s ease, box-shadow .75s ease;
   box-shadow: 0 0 15px var(--brown_o1);
 }
 
-.home section section:nth-child(3n+3):hover {
+main section section:nth-child(3n+3):hover {
   box-shadow: 0 0 15px var(--green_o1);
 }
 
-.home section section:nth-child(3n+2):hover {
+main section section:nth-child(3n+2):hover {
   box-shadow: 0 0 15px var(--purple_o1);
 }
 
-.home section section:nth-child(3n+3) {
+main section section:nth-child(3n+3) {
   background: var(--green_o1);
   color: var(--green);
 }
 
-.home section section:nth-child(3n+2) {
+main section section:nth-child(3n+2) {
   background: var(--purple_o1);
   color: var(--purple);
 }
 
-.home section h3 {
+main section h3 {
   display: flex;
   align-items: flex-start;
 }
 
-.home section section p {
+main section section p {
   margin: .5em 0;
   font-size: .85em;
   color: var(--light);
@@ -208,19 +195,19 @@ select:hover {
 
 }
 
-.home section section span {
+main section section span {
   display: flex;
   font-size: .85em;
   gap: 8px;
 }
 
-.home section section span img {
+main section section span img {
   height: 1em;
   margin-right: 8px;
   width: 1em;
 }
 
-.home section section span a {
+main section section span a {
   background-color: var(--dark_o1);
   border-radius: 1em;
   display: flex;
@@ -228,12 +215,12 @@ select:hover {
   transition: background-color .5s ease;
 }
 
-.home section section span a:hover {
+main section section span a:hover {
   background-color: var(--dark_o2);
   transition: background-color .5s ease;
 }
 
-.home section section span a.language:hover {
+main section section span a.language:hover {
   background-color: var(--dark_o1);
 }
 
@@ -256,7 +243,7 @@ select:hover {
     padding: 0 2em 2em 2em;
   }
 
-  .home section h3::before {
+  main section h3::before {
     margin-right: .3em;
   }
 }

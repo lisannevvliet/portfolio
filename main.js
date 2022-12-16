@@ -35,7 +35,6 @@ app.get("/", (_req, res) => {
   graphqlAuth(`{
     user(login: "lisannevvliet") {
       name
-      bio
       url
       repositories(first: 100, privacy: PUBLIC) {
         nodes {
