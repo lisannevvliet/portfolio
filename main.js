@@ -47,31 +47,41 @@ app.get("/", (_req, res) => {
       }
     }
   }`).then((data) => {
-    if (filter != "all") {
-      let repositories = []
+    let repositories = []
 
-      // Filter Mobile Development or Web Design & Development repositories.
-      if (filter == "mobile-development") {
-        data.user.repositories.nodes.forEach((repository) => {
-          if (repository.name.includes("Mad")) {
+    if (filter == "mobile-development") {
+      data.user.repositories.nodes.forEach((repository) => {
+        // Filter Mobile Development repositories and delete repositories without demo.
+        if (repository.name.includes("MadLevel") || repository.name.includes("iOS-Workshop") && repository.homepageUrl != null) {
+          if (repository.homepageUrl.length > 0) {
             repositories.push(repository)
           }
-        })
-      } else {
-        data.user.repositories.nodes.forEach((repository) => {
-          if (!(repository.name.includes("Mad"))) {
+        }
+      })
+    } else if (filter == "web-design-and-development") {
+      data.user.repositories.nodes.forEach((repository) => {
+        // Filter Web Design & Development repositories and delete Portfolio repository and repositories without demo.
+        if (!(repository.name.includes("MadLevel")) && !(repository.name.includes("iOS-Workshop")) && !(repository.name.includes("Portfolio")) && repository.homepageUrl != null) {
+          if (repository.homepageUrl.length > 0) {
             repositories.push(repository)
           }
-        })
-      }
-
-      data.user.repositories.nodes = repositories
+        }
+      })
+    } else {
+      // Delete Portfolio repository and repositories without demo.
+      data.user.repositories.nodes.forEach((repository) => {
+        if (!(repository.name.includes("Portfolio")) && repository.homepageUrl != null) {
+          if (repository.homepageUrl.length > 0) {
+            repositories.push(repository)
+          }
+        }
+      })
     }
 
     // Load the index page with the repositories.
     res.render("index", {
       user: data.user,
-      repositories: data.user.repositories.nodes,
+      repositories: repositories,
       filter: filter
     })
   })
