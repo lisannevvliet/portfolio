@@ -43,6 +43,9 @@ app.get("/", (_req, res) => {
           description
           url
           homepageUrl
+          primaryLanguage {
+            name
+          }
         }
       }
     }

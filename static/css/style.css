@@ -233,6 +233,10 @@ select:hover {
   transition: background-color .5s ease;
 }
 
+.home section section span a.language:hover {
+  background-color: var(--dark_o1);
+}
+
 .hide {
   display: none;
 }
