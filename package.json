@@ -1,0 +1,29 @@
+{
+  "name": "repo-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "nodemon main.js",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisannevvliet/repo-connect.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lisannevvliet/repo-connect/issues"
+  },
+  "homepage": "https://github.com/lisannevvliet/repo-connect#readme",
+  "dependencies": {
+    "@octokit/graphql": "^4.8.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
