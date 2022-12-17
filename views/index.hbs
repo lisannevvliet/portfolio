@@ -1,34 +1,30 @@
-<main>
-    <header>
-        <h1><a href="{{user.url}}" target="_blank">{{user.name}}</a></h1>
-    </header>
+<h1><a href="{{user.url}}" target="_blank">{{user.name}}</a></h1>
 
-    <form id="form" action="/" method="post">
-        <select id="filter" name="filter">
-            <option value="all"{{#ifCond filter "all"}} selected{{/ifCond}}>All</option>
-            <option value="mobile-development"{{#ifCond filter "mobile-development"}} selected{{/ifCond}}>Mobile Development</option>
-            <option value="web-design-and-development"{{#ifCond filter "web-design-and-development"}} selected{{/ifCond}}>Web Design & Development</option>
-        </select>
-        <input type="submit" class="hide"></input>
-    </form>
-    
-    <section>
-        {{#each repositories}}
-                <section>
-                    <h3>{{name}}</h3>
-                    {{#if description}}<p>{{description}}</p>{{/if}}
-                    <span>
-                        <a href="{{url}}" target="_blank"><img src="/images/github.png">GitHub</a>
-                        {{#if homepageUrl}}<a href="{{homepageUrl}}" target="_blank"><img src="/images/desktop-monitor.png">Demo</a>{{/if}}
-                        {{#ifCond primaryLanguage.name "CSS"}}<a class="language"><img src="/images/css-3.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                        {{#ifCond primaryLanguage.name "JavaScript"}}<a class="language"><img src="/images/java-script.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                        {{#ifCond primaryLanguage.name "EJS"}}<a class="language"><img src="/images/ejs_icon_132422.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                        {{#ifCond primaryLanguage.name "Handlebars"}}<a class="language"><img src="/images/handlebars_original_logo_icon_146483.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                        {{#ifCond primaryLanguage.name "HTML"}}<a class="language"><img src="/images/html.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                        {{#ifCond primaryLanguage.name "Kotlin"}}<a class="language"><img src="/images/pngwing.com.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                        {{#ifCond primaryLanguage.name "Swift"}}<a class="language"><img src="/images/swift.png">{{primaryLanguage.name}}</a>{{/ifCond}}
-                    </span>
-                </section>
-        {{/each}}
-    </section>
-</main>
+<form id="form" action="/" method="post">
+    <select id="filter" name="filter">
+        <option value="all"{{#ifCond filter "all"}} selected{{/ifCond}}>All</option>
+        <option value="mobile-development"{{#ifCond filter "mobile-development"}} selected{{/ifCond}}>Mobile Development</option>
+        <option value="web-design-and-development"{{#ifCond filter "web-design-and-development"}} selected{{/ifCond}}>Web Design & Development</option>
+    </select>
+    <input type="submit" class="hide"></input>
+</form>
+
+<section>
+    {{#each repositories}}
+            <section>
+                <h3>{{name}}</h3>
+                {{#if description}}<p>{{description}}</p>{{/if}}
+                <span>
+                    <a href="{{url}}" target="_blank"><img src="/images/github.png">GitHub</a>
+                    {{#if homepageUrl}}<a href="{{homepageUrl}}" target="_blank"><img src="/images/desktop-monitor.png">Demo</a>{{/if}}
+                    {{#ifCond primaryLanguage.name "CSS"}}<a class="language"><img src="/images/css-3.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                    {{#ifCond primaryLanguage.name "JavaScript"}}<a class="language"><img src="/images/java-script.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                    {{#ifCond primaryLanguage.name "EJS"}}<a class="language"><img src="/images/ejs_icon_132422.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                    {{#ifCond primaryLanguage.name "Handlebars"}}<a class="language"><img src="/images/handlebars_original_logo_icon_146483.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                    {{#ifCond primaryLanguage.name "HTML"}}<a class="language"><img src="/images/html.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                    {{#ifCond primaryLanguage.name "Kotlin"}}<a class="language"><img src="/images/pngwing.com.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                    {{#ifCond primaryLanguage.name "Swift"}}<a class="language"><img src="/images/swift.png">{{primaryLanguage.name}}</a>{{/ifCond}}
+                </span>
+            </section>
+    {{/each}}
+</section>
