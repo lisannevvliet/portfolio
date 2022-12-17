@@ -1,3 +1,9 @@
+@font-face {
+    font-display: swap;
+    font-family: Montserrat;
+    src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 :root {
     --brown: #CB997E;
     --brown_o1: rgba(203, 153, 126, var(--o1));
@@ -28,9 +34,12 @@ body {
 }
 
 h1 {
+    font-family: Montserrat;
     font-size: 2.6em;
+    font-weight: normal;
     letter-spacing: .04em;
     text-align: center;
+    text-transform: uppercase;
 }
 
 a {
@@ -52,7 +61,6 @@ form select {
     border-radius: 1em;
     color: var(--light);
     cursor: pointer;
-    font-weight: bold;
     padding: 1em 3.5em 1em 1.75em;
     transition: background-color .5s ease;
 }
@@ -112,9 +120,11 @@ section section:nth-child(3n+3):hover {
 }
 
 section section h3 {
-    font-size: 1.7em;
+    font-family: Montserrat;
+    font-weight: normal;
     letter-spacing: .04em;
     margin: 0;
+    text-transform: uppercase;
 }
 
 section section p {
