@@ -138,6 +138,7 @@ section section p {
 
 section section span {
     display: flex;
+    flex-wrap: wrap;
     font-size: .85em;
     gap: 8px;
 }
