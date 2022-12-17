@@ -123,6 +123,7 @@ main section {
   flex-wrap: wrap;
   gap: 2em 3em;
   margin-top: 2em;
+  justify-content: center;
 }
 
 main section section {
@@ -138,6 +139,8 @@ main section section {
   position: relative;
   transform: scale(1);
   transition: transform .5s ease, box-shadow .75s ease;;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 main section section:hover {
