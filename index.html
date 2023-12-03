@@ -11,14 +11,11 @@
             <a href="https://github.com/lisannevvliet" target="_blank">Lisanne van Vliet</a>
         </h1>
 
-        <form id="form" action="/" method="post">
-            <select id="filter" name="filter">
-                <option value="all"{{#ifCond filter "all"}} selected{{/ifCond}}>All</option>
-                <option value="mobile-development"{{#ifCond filter "mobile-development"}} selected{{/ifCond}}>Mobile Development</option>
-                <option value="web-design-and-development"{{#ifCond filter "web-design-and-development"}} selected{{/ifCond}}>Web Design & Development</option>
-            </select>
-            <input type="submit" class="hide"></input>
-        </form>
+        <select>
+            <option value="all">All</option>
+            <option value="mobile-development">Mobile Development</option>
+            <option value="web-design-and-development">Web Design & Development</option>
+        </select>
 
         <section>
         </section>
