@@ -70,6 +70,10 @@ select:hover {
     transition: background-color .5s ease;
 }
 
+select:focus {
+    outline: none;
+}
+
 section {
     display: flex;
     flex-wrap: wrap;
