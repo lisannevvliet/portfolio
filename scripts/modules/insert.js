@@ -9,33 +9,33 @@ export function insert(repository) {
     }
 
     html += `<span>
-    <a href="${repository.url}" target="_blank"><img src="/images/github.png">GitHub</a>`
+    <a href="${repository.url}" target="_blank"><img src="./images/github.png">GitHub</a>`
 
     if (repository.homepage) {
-        html += `<a href="${repository.homepage}" target="_blank"><img src="/images/desktop-monitor.png">Demo</a>`
+        html += `<a href="${repository.homepage}" target="_blank"><img src="./images/desktop-monitor.png">Demo</a>`
     }
 
     switch (repository.language) {
         case "CSS":
-            html += `<a class="language"><img src="/images/css-3.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/css-3.png">${repository.language}</a>`
             break
         case "JavaScript":
-            html += `<a class="language"><img src="/images/java-script.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/java-script.png">${repository.language}</a>`
             break
         case "EJS":
-            html += `<a class="language"><img src="/images/ejs_icon_132422.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/ejs_icon_132422.png">${repository.language}</a>`
             break
         case "Handlebars":
-            html += `<a class="language"><img src="/images/handlebars_original_logo_icon_146483.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/handlebars_original_logo_icon_146483.png">${repository.language}</a>`
             break
         case "HTML":
-            html += `<a class="language"><img src="/images/html.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/html.png">${repository.language}</a>`
             break
         case "Kotlin":
-            html += `<a class="language"><img src="/images/pngwing.com.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/pngwing.com.png">${repository.language}</a>`
             break
         case "Swift":
-            html += `<a class="language"><img src="/images/swift.png">${repository.language}</a>`
+            html += `<a class="language"><img src="./images/swift.png">${repository.language}</a>`
     }
 
     html += `</span>
