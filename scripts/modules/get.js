@@ -1,6 +1,10 @@
+import { $ } from "./$.js"
 import { insert } from "./insert.js"
 
 export function get(filter) {
+    // Show the loader upon searching.
+    $(".loader").classList.remove("none")
+
     // Get all public lisannevvliet repositories.
     fetch("https://api.github.com/users/lisannevvliet/repos?per_page=100&sort=updated&direction=asc")
         .then(response => response.json())

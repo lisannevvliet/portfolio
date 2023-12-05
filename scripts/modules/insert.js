@@ -41,6 +41,9 @@ export function insert(repository) {
     html += `</span>
     </section>`
     
+    // Hide the loader once the data is fetched.
+    $(".loader").classList.add("none")
+
     // Add the repositories to the index page.
     $("section").insertAdjacentHTML("beforeend", html)
 }

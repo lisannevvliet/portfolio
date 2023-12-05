@@ -74,6 +74,30 @@ select:focus {
     outline: none;
 }
 
+.loader {
+    border: 6px solid var(--dark_o2);
+    border-radius: 50%;
+    border-top: 6px solid white;
+    width: 45px;
+    height: 45px;
+    animation: spin 2s linear infinite;
+    margin-block-start: 1em;
+    margin-inline-start: 1em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.none {
+    display: none;
+}
+
 section {
     display: flex;
     flex-wrap: wrap;
