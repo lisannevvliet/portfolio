@@ -7,7 +7,7 @@ export function get(filter) {
         .then(data =>
             data.forEach(repository => {
                 // Delete repositories without demo and Portfolio repository.
-                if (repository.homepage && repository.name != "Portfolio") {
+                if (repository.homepage && repository.name != "portfolio") {
                     switch (filter) {
                         case "all":
                             insert(repository)
