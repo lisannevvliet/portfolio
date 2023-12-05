@@ -9,7 +9,7 @@ export function insert(repository) {
     }
 
     html += `<span>
-    <a href="${repository.url}" target="_blank"><img src="./images/github.png">GitHub</a>`
+    <a href="${repository.html_url}" target="_blank"><img src="./images/github.png">GitHub</a>`
 
     if (repository.homepage) {
         html += `<a href="${repository.homepage}" target="_blank"><img src="./images/desktop-monitor.png">Demo</a>`
